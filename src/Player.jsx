@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Timeline } from "./Timeline";
+import { Timeline } from "./Timeline.jsx";
 import { isNullOrUndefined } from "util";
 
 let id = 92962;

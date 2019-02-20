@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Vol } from "./Vol";
+import Vol from "./Vol.jsx";
 
 let page = 1;
 let GADIO_API = `https://www.gcores.com/api/categories/9/originals?page=${page}&auth_exclusive=dpkynzs2q0wm9o5gi1r83fcabthl4eu`;
