@@ -7,7 +7,7 @@ class App extends Component {
     render() {
         return (
             <Container>
-                <Player />
+                <List />
             </Container>
         )
     }
