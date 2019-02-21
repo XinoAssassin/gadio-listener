@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import Timeline from "./Timeline.jsx";
-import { isNullOrUndefined } from "util";
 
 let id = 106545;
 let TimelineAPI = `https://www.gcores.com/api/volumes/${id}/timelines?&auth_exclusive=dpkynzs2q0wm9o5gi1r83fcabthl4eu`
 
 class Player extends Component {
-  state = {
-    timelines: null
-  }
-
+    state = {
+      timelines: null
+    }
+    
   componentDidMount() {
     let proxyUrl = "https://cors-anywhere.herokuapp.com/"
     fetch(proxyUrl + TimelineAPI)
@@ -31,6 +30,7 @@ class Player extends Component {
         {
           timelines && timelines.map(result => <Timeline data={result} key={result.id} />)
         }
+        
       </div>
     );
   }

@@ -1,0 +1,13 @@
+.thumb_cover {
+  height: 64px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.on_the_bottom {
+	left: 0;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	z-index: 100;
+}
