@@ -15,7 +15,7 @@ class Timeline extends Component {
                     <Card.Body>
                         <Card.Title>{data.title}</Card.Title>
                         <Card.Text>{data.content}</Card.Text>
-                            {cardLink}
+                        {cardLink}
                     </Card.Body>
                 </Card>
             </div>
