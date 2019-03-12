@@ -11,7 +11,7 @@ class Player extends Component {
         const { id } = this.props.match.params;
         let TimelineAPI = `https://www.gcores.com/api/volumes/${id}/timelines?&auth_exclusive=dpkynzs2q0wm9o5gi1r83fcabthl4eu`;
         let proxyUrl = "https://cors-anywhere.herokuapp.com/";
-        
+
         fetch(proxyUrl + TimelineAPI)
             .then(res => res.json())
             .then((res) => {
@@ -26,20 +26,21 @@ class Player extends Component {
     render() {
         const { timelines } = this.state;
         const { state } = this.props.location;
-        /*return (
-                            <div>
-                                <div>
-                                    {
-                                        timelines && timelines.map(result => <Timeline data={result} key={result.id} />)
-                                    }
-                                </div>
-                                <div className="player">
-                                    <Mp3Player data={state} />
-                                </div>
-                            </div>
-                        );
-                    }*/
         return (
+            <div>
+                <div>
+                    {
+                        timelines && timelines.map(result => <Timeline data={result} key={result.id} />)
+                    }
+                </div>
+                <div className="player">
+                    <Mp3Player data={state} />
+                </div>
+            </div>
+        );
+    }
+}
+/*         return (
             <div>
                 {
                     timelines && timelines.map(result => <Timeline data={result} key={result.id} />)
@@ -47,5 +48,5 @@ class Player extends Component {
             </div>
         )
     }
-}
+} */
 export default Player;

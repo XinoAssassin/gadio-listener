@@ -27,7 +27,7 @@ class Vol extends Component {
         return (
             <ListGroupItem>
                 <Media as="li">
-                    <img className="thumb_cover" src={data.thumb_url} width={128} height={128} />
+                    <img className="thumb_cover" src={data.cover_url} width={64} height={64} />
                     <Media.Body onClick={this.handleClickOnItem}>
                         <h5>{data.title}</h5>
                         <p>{data.desc}</p>

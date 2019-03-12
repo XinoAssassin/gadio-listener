@@ -4,10 +4,13 @@
   margin: 0 auto;
 }
 
-.on_the_bottom {
-	left: 0;
+.player-wrapper {
 	position: fixed;
 	bottom: 0;
-	width: 100%;
+	max-width: device-width;
 	z-index: 100;
+}
+
+audio {
+	width: 55% !important;
 }
