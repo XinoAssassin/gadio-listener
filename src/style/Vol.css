@@ -1,0 +1,5 @@
+.thumb_cover {
+    height: 64px;
+    object-fit: cover;
+    margin: 0 auto;
+  }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Media, ListGroupItem } from "react-bootstrap";
 import { Redirect, Link } from "react-router-dom";
+import "./style/Vol.css"
 
 class Vol extends Component {
     state = {
