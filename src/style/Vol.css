@@ -2,4 +2,8 @@
     height: 64px;
     object-fit: cover;
     margin: 0 auto;
-  }
+}
+
+.media-body {
+  margin-left: 10px;
+}

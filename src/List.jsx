@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Vol from "./Vol.jsx";
-import { ListGroup } from "react-bootstrap";
+import { ListGroup, Spinner } from "react-bootstrap";
+import "./style/List.css"
+import Nav from "./Nav.jsx"
 
 let page = 1;
 let GADIO_API = `https://www.gcores.com/api/categories/9/originals?page=${page}&auth_exclusive=dpkynzs2q0wm9o5gi1r83fcabthl4eu`;
@@ -9,7 +11,7 @@ class List extends Component {
     state = {
         vols: null
     }
-    
+
     componentDidMount() {
         let proxyUrl = "https://cors-anywhere.herokuapp.com/"
         fetch(proxyUrl + GADIO_API)
@@ -26,13 +28,38 @@ class List extends Component {
     render() {
         const { vols } = this.state;
 
-        return (<ListGroup>
+        if (vols) {
+            return (
+            <div>
+            <Nav />
+            <ListGroup>
                 {
                     vols && vols.map(result => <Vol data={result} key={result.id} />)
                 }
-                </ListGroup>
-        );
+            </ListGroup>
+            </div>
+            );
+        }
+        else {
+            return (
+                <div>
+                    <Nav />
+                <Spinner animation="border" role="status" className="loading-animation">
+                </Spinner>
+                </div>
+            )
+        }
     }
+
+/*         render() {
+            return(
+                <div className="loading-animation-wrapper">
+                <Spinner animation="border" role="status" className="loading-animation">
+                </Spinner>
+                </div>
+            )
+        } */
+
 }
 
 export default List;

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import Nav from "./Nav.jsx";
 import Timeline from "./Timeline.jsx";
 import Mp3Player from "./Mp3Player.jsx";
+
 
 class Player extends Component {
     state = {
@@ -28,6 +30,7 @@ class Player extends Component {
         const { state } = this.props.location;
         return (
             <div>
+                <Nav title={state.title} />
                 <div>
                     {
                         timelines && timelines.map(result => <Timeline data={result} key={result.id} />)
